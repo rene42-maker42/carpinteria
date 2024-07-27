@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo ajax</title>
+</head>
+<body>
+    <h1>ejemplo ajax</h1>
+    <div id="respuesta"> respuesta ajax</div>
+    <script>
+  var ajax = new XMLHttpRequest(); //javascript ysml asincronico
+  ajx.open('GET', './ajax.php' , true);
+  ajax.onreadystatechange = function(){
+    if(ajax.readyState ==  4 ){ // peticion finalizad
+        if(ajax.status = 200 ){ //documento encontrado 
+            document.querySelector('#respuesta').innerHTML = ajax.responseText;
+        }else{
+            document.querySelector('#respuesta').innerHTML = 'peticion erronea';
+        }
+     
+    }else{
+        document.querySelector('#respuesta').innerHTML = 'espere ..';
+    }
+   
+  }
+  ajax.send(); //pidiendo ejecute el ajax y enviando datos
+
+    </script>
+</body>
+</html>

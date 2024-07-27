@@ -1,0 +1,21 @@
+.contenedor{
+    transform: translateX(250px);
+    margin-top: 20px;
+  
+   
+}
+.menu h4{
+    margin-left: 10%;
+    color:rgb(34, 4, 4);
+    text-transform: capitalize;
+    transform: translateX(-30px);
+}
+main{
+    background-image: url(../img/paisaje.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 700px;
+    overflow-x: hidden;
+   
+}

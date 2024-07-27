@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario de preguntas y respuestas</title>
+</head>
+<body>
+<form action="/cgi-bin/procesar_respuestas.cgi" method="post">
+  <label for="pregunta1">Pregunta 1:</label>
+  <input type="text" id="pregunta1" name="pregunta1"><br>
+
+  <label for="pregunta2">Pregunta 2:</label>
+  <input type="text" id="pregunta2" name="pregunta2"><br>
+
+  <label for="pregunta3">Pregunta 3:</label>
+  <input type="text" id="pregunta3" name="pregunta3"><br>
+
+  <input type="submit" value="Enviar respuestas">
+</form>
+</body>
+</html>
+
+
+<!--
+codigo c++ para que funcione el de arriba
+
+    #include <iostream>
+#include <cstdlib>
+#include <string>
+
+int main() {
+  std::cout << "Content-type:text/html\r
+\r
+";
+  std::cout << "<html>\n";
+  std::cout << "<head>\n";
+  std::cout << "<title>Respuestas</title>\n";
+  std::cout << "</head>\n";
+  std::cout << "<body>\n";
+
+  std::string pregunta1, pregunta2, pregunta3;
+
+  // Obtener los valores del formulario
+  getline(std::cin, pregunta1);
+  getline(std::cin, pregunta2);
+  getline(std::cin, pregunta3);
+
+  // Mostrar las respuestas
+  std::cout << "<h2>Respuestas:</h2>\n";
+  std::cout << "<p>Pregunta 1: " << pregunta1 << "</p>\n";
+  std::cout << "<p>Pregunta 2: " << pregunta2 << "</p>\n";
+  std::cout << "<p>Pregunta 3: " << pregunta3 << "</p>\n";
+
+  std::cout << "</body>\n";
+  std::cout << "</html>\n";
+
+  return 0;
+}
+-->
